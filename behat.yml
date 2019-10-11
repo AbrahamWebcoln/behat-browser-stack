@@ -1,10 +1,25 @@
 default:
+    suites:  
+        default:
+            contexts:
+                - FeatureContext:
+                    parameters:
+                        environment:
+                            # absolute path to local directory to store screenshots - do not include trailing slash
+                            screenshot_dir: /var/www/creighton/reports
+                - FeatureContext
+                - Drupal\DrupalExtension\Context\DrupalContext
+                - Drupal\DrupalExtension\Context\MessageContext
+                - Drupal\DrupalExtension\Context\DrushContext
+                - Drupal\DrupalExtension\Context\ConfigContext
     extensions:
         Behat\MinkExtension:
             sessions:
                 my_session:                
                     browser_stack: 
-                        username: "<username>"
-                        access_key: "<automate-key>"
-                        capabilities: {"browser" :"Chrome", "os": "OS X", "os_version": "Yosemite", "browserstack-debug": true}
+                        username: "christianburk"
+                        access_key: "mH5wZTCNfbp3WuXnzB3G"
+                        capabilities: {"browser" :"Chrome", 
+                         "browserstack-debug": true,
+                         "browserstack.local": true}
 

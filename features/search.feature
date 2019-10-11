@@ -5,6 +5,6 @@ Feature: Drupal.org search
 
   @javascript
   Scenario: Searching for "behat"
-    Given I go to "http://drupal.org"
-    When I search for "behat"
-    Then I should see "Behat Drupal Extension"
+    Given I go to "https://alliance.creighton.edu/"
+    When I follow "Read About Our Mission"
+    Then I should see "Four Impressive Partners. One Exceptional Alliance."
